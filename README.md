@@ -1,59 +1,45 @@
-# PortfolioFrontend
+# 🎨 Portfolio Frontend (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+Frontend Angular pour mon portfolio, qui consomme l’API Symfony pour afficher **les compétences** et gérer le **formulaire de contact**.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-17-red?logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?logo=typescript)
+![RxJS](https://img.shields.io/badge/RxJS-7.9-orange?logo=rxjs)
 
-To start a local development server, run:
+---
 
+## 🚀 Fonctionnalités
+
+- Affichage des compétences depuis l’API Symfony  
+- Formulaire de contact avec validation et envoi via l’API  
+- Animations CSS modernes pour les composants  
+- Particles.js pour un effet d’arrière-plan dynamique  
+
+---
+
+## ⚙️ Technologies
+
+- Angular 17  
+- TypeScript  
+- RxJS  
+- CSS3 / Animations  
+- Particles.js pour le background  
+- Consommation de l’API Symfony  
+
+---
+
+## 📦 Installation & Lancement
+
+### 1️⃣ Cloner le dépôt
 ```bash
-ng serve
+git clone https://github.com/RayanDev23/portfolio_frontend.git
+cd portfolio_frontend
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Installer les dépendances
 ```bash
-ng generate component component-name
+npm install
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3. Lancer le serveur Angular
 ```bash
-ng generate --help
+ng serv -o
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
