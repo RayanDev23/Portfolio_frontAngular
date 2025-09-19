@@ -1,0 +1,140 @@
+/* Conteneur principal */
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animation d'apparition globale */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre */
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Animation simple pour le titre */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Champs du formulaire */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Ajout de délais différents pour chaque champ */
+.form-group:nth-child(1) { animation-delay: 0.3s; }
+.form-group:nth-child(2) { animation-delay: 0.6s; }
+.form-group:nth-child(3) { animation-delay: 0.9s; }
+
+/* Animation slide-in */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px #8e2de2;
+}
+
+/* Messages d’erreur */
+small {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+/* Bouton */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  color: #fff;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+button:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: linear-gradient(45deg, #4a00e0, #8e2de2);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}

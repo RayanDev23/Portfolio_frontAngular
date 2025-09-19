@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css - global pour toute la page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1f, #2a003f, #3b0066);
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Supprimer tout background blanc des composants par défaut */
+* {
+  background: transparent;
+}

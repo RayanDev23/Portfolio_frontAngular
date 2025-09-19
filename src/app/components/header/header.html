@@ -1,0 +1,16 @@
+<header class="navbar">
+  <div class="logo">Mon Portfolio</div>
+
+  <nav class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+    <a routerLink="/skills" routerLinkActive="active">Compétences</a>
+    <a routerLink="/projects" routerLinkActive="active">Projets</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>

@@ -1,0 +1,40 @@
+<div class="contact-container">
+  <h2>📩 Contactez-moi</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <!-- Nom -->
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input id="nom" type="text" formControlName="nom" placeholder="Votre nom" />
+      <small *ngIf="contactForm.get('nom')?.invalid && contactForm.get('nom')?.touched">
+        ⚠️ Le nom est requis
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Votre email" />
+      <small *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        ⚠️ Entrez un email valide
+      </small>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" formControlName="message" rows="5" placeholder="Votre message..."></textarea>
+      <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+        ⚠️ Le message est requis
+      </small>
+    </div>
+
+    <!-- Bouton -->
+    <button type="submit" [disabled]="contactForm.invalid">Envoyer 🚀</button>
+  </form>
+
+  <!-- Message de confirmation animé -->
+  <div class="success-message" *ngIf="messageEnvoye">
+    ✅ Merci pour ton message, je te répondrai bientôt !
+  </div>
+</div>
